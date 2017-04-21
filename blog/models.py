@@ -16,7 +16,7 @@ class Post(models.Model):
     yayinlanma_tarihi = models.DateTimeField(
            blank=True, null=True)
 
-    def yayinla(self):
+    def publish(self): #publish yerine yayinla idi tr tutorial da
         self.yayinlanma_tarihi = timezone.now()
         self.save()
 
